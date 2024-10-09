@@ -1,16 +1,22 @@
-
-
 let messages = [];
+
+function addMessage(msg) {
+  
+  if (messages.length >= 30) {
+    messages.shift();
+  }
+  messages.push(msg);
+}
 
 export const chatSocket = (io) => {
   io.on('connection', (socket) => {
     console.log('Conectado:', socket.id); 
 
     socket.emit('previousMessages', messages);
-
-
     socket.on('chatMessage', (msg) => {
-      messages.push(msg);
+      addMessage(msg)
+      
+
       io.emit('chatMessage', msg); 
       console.log(messages);
     });
