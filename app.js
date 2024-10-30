@@ -22,7 +22,8 @@ const options = {
 const server = createServer(options,app)
 const io = new Server(server, {
   cors: {
-    origin: "https://192.168.1.80:5173", // Reemplaza con la URL de tu frontend
+    // origin: "https://192.168.1.80:5173", // Reemplaza con la URL de tu frontend
+    origin: "https://172.20.2.57:5173", // Reemplaza con la URL de tu frontend
     methods: ["GET", "POST"],
     credentials: true
   }

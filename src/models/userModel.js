@@ -5,6 +5,41 @@ const users = [
     username: 'Daniel',
     password: '$2a$10$byTXPdvnZ8IZAo0gkr5gcOVdA9ws/Aqj4xk1qqxdxA04fegVhlR5W'
   },
+  {
+    id: 2,
+    username: 'Marco',
+    password: '$2a$10$Sn/hV0kYfcBV8rwpoHHXluwsQb3Zw14bpqjKwzlapa/LtuHiDp1OC'
+  },
+  {
+    id: 3,
+    username: 'Luis',
+    password: '$2a$10$Sn/hV0kYfcBV8rwpoHHXluwsQb3Zw14bpqjKwzlapa/LtuHiDp1OC'
+  },
+  {
+    id: 4,
+    username: 'Crisis',
+    password: '$2a$10$Sn/hV0kYfcBV8rwpoHHXluwsQb3Zw14bpqjKwzlapa/LtuHiDp1OC'
+  },
+  {
+    id: 4,
+    username: 'Uziel',
+    password: '$2a$10$Sn/hV0kYfcBV8rwpoHHXluwsQb3Zw14bpqjKwzlapa/LtuHiDp1OC'
+  },
+  {
+    id: 4,
+    username: 'Ivan',
+    password: '$2a$10$Sn/hV0kYfcBV8rwpoHHXluwsQb3Zw14bpqjKwzlapa/LtuHiDp1OC'
+  },
+  {
+    id: 4,
+    username: 'Vicky',
+    password: '$2a$10$byTXPdvnZ8IZAo0gkr5gcOVdA9ws/Aqj4xk1qqxdxA04fegVhlR5W'
+  },
+  {
+    id: 5,
+    username: 'Sergio',
+    password: '$2a$10$Sn/hV0kYfcBV8rwpoHHXluwsQb3Zw14bpqjKwzlapa/LtuHiDp1OC'
+  }
 ]
 
 export default class User {
