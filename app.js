@@ -7,6 +7,7 @@ import { config } from 'dotenv';
 import { chatSocket } from './src/sockets/chatSocket.js';
 // import chatRoutes from './src/routes/chatRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
+import generalRoutes from './src/routes/generalRoutes.js';
 import cors from 'cors';
 config();
 const PORT =  3000;
@@ -34,6 +35,7 @@ app.use(express.json());
 
 // app.use('/api/chat', chatRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/general', generalRoutes);
 
 chatSocket(io);
 
