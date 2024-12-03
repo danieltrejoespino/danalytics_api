@@ -1,5 +1,5 @@
 import express from 'express';
-import { bin } from '../controllers/generalController.js';
+import { bin,reEtiquetado,ConsultaDuplicados } from '../controllers/generalController.js';
 
 import bodyParser from 'body-parser'
 
@@ -39,7 +39,8 @@ router.get('/',(req,res)=> {
 
 router.post('/bin', bin);
 
-
+router.post('/reEtiquetadoConsultaDuplicados', ConsultaDuplicados);
+router.post('/reEtiquetado', reEtiquetado);
 
 
 
