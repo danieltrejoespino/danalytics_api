@@ -35,8 +35,8 @@ export const bin = async (req, res) => {
 
 export const ConsultaDuplicados = async (req, res) => {
   const { fechaInicio, fechaFin } = req.body;
-  // const url = "http://172.23.62.183:3000/api/consultaDuplicadosGrab";
-  const url = "http://172.20.1.89:3002/api/consultaDuplicadosGrab";
+  const url = "http://172.23.62.183:3000/api/consultaDuplicadosGrab";
+  // const url = "http://172.20.1.89:3002/api/consultaDuplicadosGrab";
 
   const fechas = {
     fechaInicio,
@@ -60,8 +60,8 @@ export const ConsultaDuplicados = async (req, res) => {
 
 export const reEtiquetado = async (req, res) => {
   const { fechaInicio, fechaFin } = req.body;
-  // const url = "http://172.23.62.183:3000/api/reEtiquetado";
-  const url = "http://172.20.1.89:3002/api/reEtiquetado";
+  const url = "http://172.23.62.183:3000/api/reEtiquetado";
+  // const url = "http://172.20.1.89:3002/api/reEtiquetado";
 
   const fechas = {
     fechaInicio,
