@@ -1,5 +1,6 @@
 import axios from "axios";
 import https from "https";
+import myslqAccions from "../models/dbModel.js";
 
 const agent = new https.Agent({
   rejectUnauthorized: false, // Ignora los certificados autofirmados
@@ -82,6 +83,32 @@ export const reEtiquetado = async (req, res) => {
     res.status(500).json({ message: "Error processing the request" });
   }
 };
+
+
+export const getPhoneExt = async (req, res) => {
+
+  try {
+    const log= await myslqAccions.getExt()
+    // console.log(log);    
+    if(log.length > 0){
+      res.status(200).json(log)
+    }else {
+      res.status(404).json({ rspta: 'NO MENU' })
+    }
+  } catch (error) {
+    console.log(error);
+  }
+  
+
+};
+
+
+
+
+
+
+
+
 
 
 const dateFormat = (data) => {

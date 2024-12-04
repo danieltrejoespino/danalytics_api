@@ -3,7 +3,7 @@ import { Server } from "socket.io";
 import fs from 'fs';
 import { createServer } from "https"; 
 import { config } from 'dotenv';
-
+import pool from "./src/config/dbConfig.js";
 import { chatSocket } from './src/sockets/chatSocket.js';
 // import chatRoutes from './src/routes/chatRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
@@ -36,6 +36,20 @@ app.use(express.json());
 // app.use('/api/chat', chatRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/general', generalRoutes);
+
+
+// Verificar la conexión al iniciar la API
+(async () => {
+  try {
+    const connection = await pool.getConnection();
+    console.log('Conexión al pool exitosa');
+    connection.release(); // Liberar la conexión
+  } catch (err) {
+    console.error('Error al conectar con la base de datos:', err.message);
+  }
+})();
+
+
 
 chatSocket(io);
 
