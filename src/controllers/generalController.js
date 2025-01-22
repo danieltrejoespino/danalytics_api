@@ -102,7 +102,11 @@ export const getPhoneExt = async (req, res) => {
 
 };
 
-
+export const sendSMS = async (req,res) => {
+  const { fechaInicio, fechaFin } = req.body;
+  
+  res.status(500).json({ message: "Error processing the request" });
+}
 
 
 
