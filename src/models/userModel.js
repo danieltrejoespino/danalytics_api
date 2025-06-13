@@ -27,7 +27,7 @@ const users = [
   },
   {
     id: 4,
-    username: 'Ivan',
+    username: 'Jose',
     password: '$2a$10$Sn/hV0kYfcBV8rwpoHHXluwsQb3Zw14bpqjKwzlapa/LtuHiDp1OC'
   },
   {
