@@ -1,5 +1,5 @@
 import express from 'express';
-import { bin,reEtiquetado,ConsultaDuplicados,getPhoneExt,sendSMS } from '../controllers/generalController.js';
+import { bin,reEtiquetado,ConsultaDuplicados,getPhoneExt,sendSMS, getIps } from '../controllers/generalController.js';
 
 import bodyParser from 'body-parser'
 
@@ -43,6 +43,7 @@ router.post('/sendSMS', sendSMS);
 router.post('/reEtiquetadoConsultaDuplicados', ConsultaDuplicados);
 router.post('/reEtiquetado', reEtiquetado);
 router.get('/getPhoneExtensions', getPhoneExt );
+router.get('/getIpsApp', getIps );
 
 
 

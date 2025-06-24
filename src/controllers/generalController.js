@@ -102,6 +102,23 @@ export const getPhoneExt = async (req, res) => {
 
 };
 
+export const getIps = async (req, res) => {
+
+  try {
+    const log= await myslqAccions.getIp()
+    // console.log(log);    
+    if(log.length > 0){
+      res.status(200).json(log)
+    }else {
+      res.status(404).json({ rspta: 'NO MENU' })
+    }
+  } catch (error) {
+    console.log(error);
+  }
+  
+
+};
+
 export const sendSMS = async (req,res) => {
   const { fechaInicio, fechaFin } = req.body;
   

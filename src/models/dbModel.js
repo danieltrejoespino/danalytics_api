@@ -31,6 +31,19 @@ const myslqAccions = {
       if (connection) connection.release();
     }
   },
+  getIp: async () => {
+    let connection;
+    try {
+      connection = await pool.getConnection();
+      const [rows] = await connection.query(`SELECT CAMPANA,NAME,IP,ENVIROMENT,TYPE_APP,COMMENTS  FROM TBL_APP_SERVICES WHERE STATUS = 1`);
+      return rows;
+    } catch (error) {
+      console.log(error);
+    }finally {
+      // Liberar la conexión al pool
+      if (connection) connection.release();
+    }
+  },
 }
 
 
